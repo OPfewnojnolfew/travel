@@ -10,5 +10,8 @@ padding-top: 75px;
 }
 .boxtop{margin-top:100px;}
 .input-w{width:300px;}
-
+.customcol{
+	padding-left: 0px;
+	padding-right: 0px;
+}
 
