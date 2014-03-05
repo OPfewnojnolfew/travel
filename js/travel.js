@@ -1,5 +1,6 @@
 $(function(){
-	$(".datetimepicker").datetimepicker({
-		language: 'zh-CN'
+	$("#datetimepicker1").datetimepicker({
+		language: 'zh-CN',
+		format: "yyyy-MM-dd"
 	});
 })

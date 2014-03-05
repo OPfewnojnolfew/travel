@@ -14,4 +14,12 @@ padding-top: 75px;
 	padding-left: 0px;
 	padding-right: 0px;
 }
+.topnav>ol{
+	width: 89%;
+}
+.topnav>div{
+	width:11%;
+	color: #fff;
+	background-color: #c83025;
+}
 

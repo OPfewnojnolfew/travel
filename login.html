@@ -1,7 +1,14 @@
 <html>
 <head>
+	<title>登录</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="[地主旅行]后端管理平台">
+	<meta name="keywords" content="[地主旅行]后端管理平台">
+	<meta name="author" content="Mr Bing">
+	<meta name="robots" content="index,follow">
+	<meta name="application-name" content="[地主旅行]后端管理平台">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/travel.css"></head>
@@ -18,7 +25,7 @@
 	</div>
 	<div class="container  customcontainer">
 		<div class="row">
-			<div class="col-md-4 col-md-offset-4">
+			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-default boxtop">
 					<div class="panel-heading">
 						<h4 class="text-primary">欢迎登录</h4>
@@ -26,37 +33,47 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
+
 								<form action="1.php" method="post" class="margin-base-vertical">
-									<p class="input-group">
+								<div class="alert alert-danger">输入有误,请重新输入</div>
+									<p class="input-group input-group-lg">
 										<span class="input-group-addon">
 											<span class="icon-leaf"></span>
 										</span>
 										<input type="text" class="form-control" name="text" placeholder="用户名"></p>
-									<p class="input-group">
+									<p class="input-group  input-group-lg">
 										<span class="input-group-addon">
 											<span class="icon-key"></span>
 										</span>
 										<input type="password" class="form-control" name="password" placeholder="密码"></p>
+									<p class="input-group  input-group-lg">
 
-									<div class="row">
-										<div class="col-md-8">
-											<div class="input-group">
-												<span class="input-group-addon">
-													<span class="icon-picture"></span>
-												</span>
+										<div class="row">
+											<div class="col-md-8">
+												<div class="input-group input-group-lg">
+													<span class="input-group-addon">
+														<span class="icon-picture"></span>
+													</span>
 
-												<input type="text" class="form-control" name="text" placeholder="验证码"></div>
+													<input type="text" class="form-control" name="text" placeholder="验证码"></div>
+											</div>
+											<div class="col-md-4">
+												<img src="images/checkcode.png"/>
+											</div>
+
 										</div>
-										<div class="col-md-4">
-											<img src="images/checkcode.png"/>
+									</p>
+									<p class="input-group  input-group-lg">
+										<div class="row">
+											<div class="col-md-4 col-md-offset-4">
+												<a class="btn btn-lg btn-primary" href="#">
+													登录 <i class="icon-hand-right"></i>
+
+												</a>
+											</div>
+
 										</div>
 
-									</div>
-									<p class="text-center">
-										<button class="btn btn-success" type="submit">
-											登录&nbsp;
-											<span class="icon-circle-arrow-right"></span>
-										</button>
 									</p>
 								</form>
 							</div>
