@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-	<title>地主标签</title>
+	<title>活动主题</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,75 +73,83 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<h3>地主标签</h3>
+					<h3>活动主题</h3>
 					<ol class="breadcrumb">
 					  <li><a href="#"><i class="icon-home"></i>首页</a></li>
 					  <li><a href="#">内容管理</a></li>
-					  <li class="active">地主标签</li> 
+					  <li class="active">活动主题</li> 
 					</ol>
 					
 					<div class="row">
 						<div class="col-md-12">
 							<div class="panel panel-success">
 						        <div class="panel-heading">
-						          	<h3 class="panel-title">地主标签</h3>
+						          	<h3 class="panel-title">活动主题</h3>
 						        </div>
 						        <div class="panel-body">
-							          <h4>职业</h4>
 							          <div class="table-responsive">
 									      <table class="table table-bordered table-striped small"> 
+									      	<colgroup>
+									          <col class="col-xs-2">
+									          <col class="col-xs-7"> 
+									        </colgroup>  
 									        <tbody>
 									          <tr>
-									            <td>大学生</td> 
+									            <td><strong>主题</strong></td> 
+									            <td><strong>图片</strong></td> 
 									          </tr>
 									          <tr>
-									            <td>老师</td> 
+									            <td>主题一</td> 
+									            <td><img src="images/icon.png"></td> 
 									          </tr>
 									          <tr>
-									            <td>白领</td> 
+									            <td>主题二</td>
+									            <td><img src="images/icon.png"></td> 
 									          </tr>
 									          <tr>
-									            <td>客栈老板</td> 
+									            <td>主题三</td> 
+									            <td><img src="images/icon.png"></td> 
 									          </tr>
 									          <tr>
-									            <td>其他</td> 
+									            <td>主题四</td> 
+									            <td><img src="images/icon.png"></td> 
 									          </tr>
 									        </tbody>
 									      </table>
-								    </div>
-									<button type="button" class="btn btn-info icon-plus">添加</button>
-									<h4>性格</h4>
-							          <div class="table-responsive">
-									      <table class="table table-bordered table-striped small"> 
-									        <tbody>
-									          <tr>
-									            <td>开朗</td> 
-									          </tr>
-									          <tr>
-									            <td>文艺</td> 
-									          </tr>
-									          <tr>
-									            <td>小清新</td> 
-									          </tr>
-									          <tr>
-									            <td>屌丝</td> 
-									          </tr>
-									          <tr>
-									            <td>其他</td> 
-									          </tr>
-									        </tbody>
-									      </table>
-								    </div>
+								    </div> 
+									<h4>添加主题</h4> 
 								    <div class="row">
-										<div class="col-md-3">
-											<input type="text" class="form-control"  placeholder="添加">
-										</div>
-										<div class="col-md-1">
-											<button type="button" class="btn btn-info icon-plus">添加</button>
-										</div>
-										<div class="col-md-1">
-											<button type="button" class="btn btn-default icon-undo">取消</button>
-										</div>
+										<div class="col-md-6">
+											<form class="form-horizontal" role="form">
+											  <div class="form-group">
+											  	<div class="col-md-2">
+											    <label for="" class="control-label">图标</label>
+											    </div>
+											    <div class="col-md-4">
+													<img src="images/activity.png" alt="" class="img-thumbnail"> 
+											    </div> 
+											    <div class="col-md-4">
+											    	<button type="button" class="btn btn-default icon-paper-clip">选择图片</button>
+											    </div>
+											  </div>
+											  <div class="form-group">
+													<div class="col-md-2">
+														<label for="" class="control-label">名称</label>
+													</div>
+													<div class="col-md-6">
+														<input type="text" class="form-control"  placeholder="名称">
+													</div>
+											  </div> 
+											  <div class="form-group">
+											  		<div class="col-md-3 col-md-offset-2">
+														<button type="button" class="btn btn-info icon-save">保存</button>
+													</div>
+													<div class="col-md-3">
+														<button type="button" class="btn btn-default icon-undo">取消</button>
+													</div> 
+											  </div>
+											</form>
+										</div> 
 								    </div>
 								    
 					    		</div>
