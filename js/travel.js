@@ -12,5 +12,4 @@ $(function() {
 			return $dv;
 		}
 	});
-	$('.fancybox').fancybox();
 })
