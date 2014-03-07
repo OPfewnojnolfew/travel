@@ -14,12 +14,17 @@ padding-top: 75px;
 	padding-left: 0px;
 	padding-right: 0px;
 }
-.topnav>ol{
-	width: 89%;
+.topnav{
+	position: relative;
 }
 .topnav>div{
-	width:11%;
-	color: #fff;
-	background-color: #c83025;
+	position: absolute;
+	top:0;
+	right:0;
+	background-color:#ed4e2a;
+	color:white;
+	padding: 8px 15px;
+	margin-bottom: 20px;
+    border-radius:0px;
 }
 
