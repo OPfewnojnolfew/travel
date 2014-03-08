@@ -10,10 +10,10 @@
 	<meta name="author" content="Mr Bing">
 	<meta name="robots" content="index,follow">
 	<meta name="application-name" content="[地主旅行]后端管理平台">
-
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/travel.css"></head>
+	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
 		<div class="container">
@@ -23,7 +23,7 @@
 			<nav role="navigation" >
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="index.html">起步</a>
+						<a href="index.html">首页</a>
 					</li>
 					<li class="active">
 						<a href="activitymanage.html" >活动</a>
@@ -35,10 +35,10 @@
 						<a href="subject.html">意见反馈</a>
 					</li>
 					<li>
-						<a href="#">内容管理</a>
+						<a href="manual.html">内容管理</a>
 					</li>
 					<li>
-						<a href="#">系统设置</a>
+						<a href="account.html">系统设置</a>
 					</li>
 				</ul>
 
@@ -69,29 +69,13 @@
 		<div class="row">
 			<div class="col-md-3">
 				<div class="list-group">
-					<a href="#" class="list-group-item active">
+					<a href="activitymanage.html" class="list-group-item active">
 						<i class="icon-chevron-left pull-right"></i>
-						起步
+						活动列表
 					</a>
-					<a href="#" class="list-group-item">
+					<a href="activitylocked.html" class="list-group-item">
 						<i class="icon-chevron-left pull-right text-muted"></i>
-						活动
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						用户
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						意见反馈
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						内容管理
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						系统设置
+						被锁定活动
 					</a>
 				</div>
 			</div>
@@ -100,14 +84,10 @@
 					<li>
 						<a href="#">
 							<i class="icon-home"></i>
-							首页
+							活动
 						</a>
-					</li>
-					<li>
-						<a href="#">中页</a>
-					</li>
-					<li class="active">末页</li>
-					<span class="pull-right  text-muted">欢迎PTF</span>
+					</li> 
+					<li class="active">活动列表</li> 
 				</ol>
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -388,7 +368,6 @@
 	</div>
 	<center class="copyright ">&copy;&nbsp;BETALABS</center>
 </body>
-	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/travel.js"></script>
