@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>地主</title>
+	<title>被锁定用户</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,8 +71,8 @@
 		<div class="row">
 			<div class="col-md-3 ">
 				<div class="list-group">
-					<a href="usermanage.html" class="list-group-item active">
-						<i class="icon-chevron-left pull-right"></i>
+					<a href="usermanage.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right text-muted"></i>
 						地主
 					</a>
 					<a href="pendingusermanage.html" class="list-group-item">
@@ -87,8 +87,8 @@
 						<i class="icon-chevron-left pull-right text-muted"></i>
 						被推荐地主
 					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
+					<a href="lockusermanage.html" class="list-group-item active">
+						<i class="icon-chevron-left pull-right"></i>
 						被锁定用户
 					</a>
 				</div>
@@ -96,7 +96,7 @@
 			<div class="col-md-9">
 				<h3>赵一凡</h3>
 
-				<div class="topnavbtngroup">
+				<div class="topnav">
 					<ol class="breadcrumb">
 						<li>
 							<a href="#">
@@ -112,19 +112,9 @@
 						</li>
 						<li class="active">地主</li>
 					</ol>
-					<div class="btn-group ">
-						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-							推荐
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li>
-								<a href="#">推荐</a>
-							</li>
-							<li>
-								<a href="#">锁定</a>
-							</li>
-						</ul>
+					<div>
+						<i class="icon-unlock"></i>
+						取消锁定
 					</div>
 				</div>
 				<div class="row">
