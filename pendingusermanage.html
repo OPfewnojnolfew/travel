@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+	<title>待审核地主</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="[地主旅行]后端管理平台">
+	<meta name="keywords" content="[地主旅行]后端管理平台">
+	<meta name="author" content="Mr Bing">
+	<meta name="robots" content="index,follow">
+	<meta name="application-name" content="[地主旅行]后端管理平台">
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/travel.css">
+		<script type="text/javascript" src="bootstrap/js/respond.min.js"></script></head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
+		<div class="container">
+			<div class="navbar-header">
+				<a href="../" class="navbar-brand">[地主旅行]管理系统</a>
+			</div>
+			<nav role="navigation" >
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="activitymanage.html" >活动</a>
+					</li>
+					<li  class="active">
+						<a href="usermanage.html">用户</a>
+					</li>
+					<li>
+						<a href="subject.html">意见反馈</a>
+					</li>
+					<li>
+						<a href="manual.html">内容管理</a>
+					</li>
+					<li>
+						<a href="accountmanage.html">系统设置</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							用户名
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#"> <i class="icon-lock"></i>
+									更改密码
+								</a>
+							</li>
+							<li>
+								<a href="#"> <i class="icon-key"></i>
+									退出系统
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="container  customcontainer">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="list-group">
+					<div class="list-group">
+						<a href="usermanage.html" class="list-group-item">
+							<i class="icon-chevron-left pull-right text-muted"></i>
+							地主
+						</a>
+						<a href="pendinguserdetail.html" class="list-group-item active">
+							<i class="icon-chevron-left pull-right text-muted"></i>
+							待审核地主
+						</a>
+						<a href="normalusermanage.html" class="list-group-item">
+							<i class="icon-chevron-left pull-right text-muted"></i>
+							普通用户
+						</a>
+						<a href="recommendusermanage.html" class="list-group-item">
+							<i class="icon-chevron-left pull-right text-muted"></i>
+							被推荐地主
+						</a>
+						<a href="#" class="list-group-item">
+							<i class="icon-chevron-left pull-right text-muted"></i>
+							被锁定用户
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">
+							<i class="icon-home"></i>
+							用户名
+						</a>
+					</li>
+					<li class="active">待审核地主</li>
+				</ol>
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">待审核地主列表</h3>
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<div class="col-md-2">
+									<div class="input-group input-group-sm">
+										<input type="text" class="form-control">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">
+												<i class="icon-search"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											城市
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="#">西安</a>
+											</li>
+											<li>
+												<a href="#">渭南</a>
+											</li>
+											<li>
+												<a href="#">咸阳</a>
+											</li>
+											<li>
+												<a href="#">宝鸡</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											性别
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="#">男</a>
+											</li>
+											<li>
+												<a href="#">女</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">起始</span>
+										<input type="text" id="datebegin" class="form-control">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'datebegin'})">
+												<i class="icon-calendar"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">到</span>
+										<input type="text" class="form-control" id="dateend">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'dateend'})">
+												<i class="icon-calendar"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-1">
+									<button type="submit" class="btn btn-sm btn-primary">确定</button>
+								</div>
+							</div>
+						</form>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped small">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>头像</th>
+										<th>名称</th>
+										<th>性别</th>
+										<th>标签</th>
+										<th>城市</th>
+										<th>申请时间</th>
+										<th>认领项</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>001</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>
+											<a href="userdetail.html">藕节</a>
+										</td>
+										<td>女</td>
+										<td>大学生,开朗</td>
+										<td>西安</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#">身份证</a>
+										</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myReject">驳回</a>
+											|
+											<a href="#" class="text-default">同意</a>
+											|
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>002</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>
+											<a href="userdetail.html">藕节</a>
+										</td>
+										<td>女</td>
+										<td>大学生,开朗</td>
+										<td>西安</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#">身份证</a>
+										</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myReject">驳回</a>
+											|
+											<a href="#" class="text-default">同意</a>
+											|
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>003</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>
+											<a href="userdetail.html">藕节</a>
+										</td>
+										<td>女</td>
+										<td>大学生,开朗</td>
+										<td>西安</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#">身份证</a>
+										</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myReject">驳回</a>
+											|
+											<a href="#" class="text-default">同意</a>
+											|
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>004</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>
+											<a href="userdetail.html">藕节</a>
+										</td>
+										<td>女</td>
+										<td>大学生,开朗</td>
+										<td>西安</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#">身份证</a>
+										</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myReject">驳回</a>
+											|
+											<a href="#" class="text-default">同意</a>
+											|
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>005</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>
+											<a href="userdetail.html">藕节</a>
+										</td>
+										<td>女</td>
+										<td>大学生,开朗</td>
+										<td>西安</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#">身份证</a>
+										</td>
+										<td>
+											<span class="text-danger">已驳回</span>
+										</td>
+									</tr>
+									<tr>
+										<td>006</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>
+											<a href="userdetail.html">藕节</a>
+										</td>
+										<td>女</td>
+										<td>大学生,开朗</td>
+										<td>西安</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#">身份证</a>
+										</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myReject">驳回</a>
+											|
+											<a href="#" class="text-default">同意</a>
+											|
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">锁定</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="pagination pull-right">
+							<li>
+								<a href="#">&laquo;</a>
+							</li>
+							<li>
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#">&raquo;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">锁定</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 					<div class="row">
+					<div class=".col-md-6 .col-md-offset-3">
+						-->
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="inputloack" class="col-sm-3 control-label">锁定地主</label>
+								<div class="col-sm-8">
+									<p class="form-control-static">张小七</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputlockCase" class="col-sm-3 control-label">锁定原因</label>
+								<div class="col-sm-8">
+									<select class="form-control">
+										<option selected value="">选择锁定原因</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-3 col-sm-8">
+									<textarea class="form-control" rows="3" placeholder="补充说明"></textarea>
+								</div>
+							</div>
+						</form>
+						<!-- 						</div>
+					</div>
+					-->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">锁定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myReject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">申请驳回</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 					<div class="row">
+					<div class=".col-md-6 .col-md-offset-3">
+						-->
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="inputloack" class="col-sm-3 control-label">申请人</label>
+								<div class="col-sm-8">
+									<p class="form-control-static">张小七</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputlockCase" class="col-sm-3 control-label">驳回原因</label>
+								<div class="col-sm-8">
+									<select class="form-control">
+										<option selected value="">照片不清晰</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-3 col-sm-8">
+									<textarea class="form-control" rows="3" placeholder="补充说明"></textarea>
+								</div>
+							</div>
+						</form>
+						<!-- 						</div>
+					</div>
+					-->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">驳回</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<center class="copyright ">&copy;&nbsp;BETALABS</center>
+</body>
+	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/travel.js"></script>
+	<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</html>
