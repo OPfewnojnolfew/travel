@@ -114,97 +114,88 @@
 						<h3 class="panel-title">活动管理</h3>
 					</div>
 					<div class="panel-body">
-						<div class="row form-group">
-							<div class="col-xs-3">
-								<div class="input-group input-group-sm">
-									<input type="text" class="form-control">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">
-											<i class="icon-search"></i>
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<div class="col-md-2">
+									<div class="input-group input-group-sm">
+										<input type="text" class="form-control">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">
+												<i class="icon-search"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											香格里拉
+											<span class="caret"></span>
 										</button>
-									</span>
-								</div>
-							</div>
-							<div class="col-xs-3">
-								<div class="row">
-									<div class="col-xs-6 customcol">
-										<div class="btn-group btn-group-sm">
-											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-												香格里拉
-												<span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" role="menu">
-												<li>
-													<a href="#">西安</a>
-												</li>
-												<li>
-													<a href="#">渭南</a>
-												</li>
-												<li>
-													<a href="#">咸阳</a>
-												</li>
-												<li>
-													<a href="#">宝鸡</a>
-												</li>
-											</ul>
-										</div>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="#">西安</a>
+											</li>
+											<li>
+												<a href="#">渭南</a>
+											</li>
+											<li>
+												<a href="#">咸阳</a>
+											</li>
+											<li>
+												<a href="#">宝鸡</a>
+											</li>
+										</ul>
 									</div>
-									<div class="col-xs-6 customcol">
-										<div class="btn-group btn-group-sm">
-											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-												主题选择
-												<span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" role="menu">
-												<li>
-													<a href="#">黑主题</a>
-												</li>
-												<li>
-													<a href="#">白主题</a>
-												</li>
-												<li>
-													<a href="#">彩主题</a>
-												</li>
-												<li>
-													<a href="#">其他主题</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-5">
-								<div class="row">
-									<div class="col-xs-5 customcol">
-										<div class="input-group input-group-sm">
-											<span class="input-group-addon">起始</span>
-											<input type="text" id="datebegin" class="form-control">
-											<span class="input-group-btn">
-												<button class="btn btn-default" type="button" onclick="WdatePicker({el:'datebegin'})">
-													<i class="icon-calendar"></i>
-												</button>
-											</span>
-										</div>
 
-									</div>
-									<div class="col-xs-1 customcol"></div>
-									<div class="col-xs-5 customcol">
-										<div class="input-group input-group-sm">
-											<span class="input-group-addon">到</span>
-											<input type="text" class="form-control" id="dateend">
-											<span class="input-group-btn">
-												<button class="btn btn-default" type="button" onclick="WdatePicker({el:'dateend'})">
-													<i class="icon-calendar"></i>
-												</button>
-											</span>
-										</div>
+									<div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											主题选择
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="#">黑主题</a>
+											</li>
+											<li>
+												<a href="#">白主题</a>
+											</li>
+											<li>
+												<a href="#">彩主题</a>
+											</li>
+											<li>
+												<a href="#">其他主题</a>
+											</li>
+										</ul>
 									</div>
 								</div>
+								<div class="col-md-3">
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">起始</span>
+										<input type="text" id="datebegin" class="form-control">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'datebegin'})">
+												<i class="icon-calendar"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">到</span>
+										<input type="text" class="form-control" id="dateend">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'dateend'})">
+												<i class="icon-calendar"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-1">
+									<button type="submit" class="btn btn-sm btn-primary">确定</button>
+								</div>
 							</div>
-							<div class="col-xs-1">
-								<button type="submit" class="btn btn-sm btn-primary">确定</button>
-							</div>
-						</div>
+						</form>
 						<div class="table-responsive">
 							<table class="table table-bordered table-striped small">
 								<thead>
@@ -237,7 +228,7 @@
 											<a href="#" class="text-default isdelete">删除</a>
 										</td>
 									</tr>
-									<tr class="active">
+									<tr>
 										<td>001</td>
 										<td>
 											<img src="images/140.png" alt="..." class="img-rounded" ></td>
@@ -269,7 +260,7 @@
 											<a href="#" class="text-default isdelete">删除</a>
 										</td>
 									</tr>
-									<tr class="active">
+									<tr>
 										<td>001</td>
 										<td>
 											<img src="images/140.png" alt="..." class="img-rounded"></td>
@@ -301,7 +292,7 @@
 											<a href="#" class="text-default isdelete">删除</a>
 										</td>
 									</tr>
-									<tr class="active">
+									<tr>
 										<td>001</td>
 										<td>
 											<img src="images/140.png" alt="..." class="img-rounded"></td>
