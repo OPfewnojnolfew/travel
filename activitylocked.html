@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+	<title>活动管理</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="[地主旅行]后端管理平台">
+	<meta name="keywords" content="[地主旅行]后端管理平台">
+	<meta name="author" content="Mr Bing">
+	<meta name="robots" content="index,follow">
+	<meta name="application-name" content="[地主旅行]后端管理平台">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/travel.css"></head>
+	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
+		<div class="container">
+			<div class="navbar-header">
+				<a href="../" class="navbar-brand">[地主旅行]管理系统</a>
+			</div>
+			<nav role="navigation" >
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li class="active">
+						<a href="activitymanage.html" >活动</a>
+					</li>
+					<li>
+						<a href="userdetail.html">用户</a>
+					</li>
+					<li>
+						<a href="subject.html">意见反馈</a>
+					</li>
+					<li>
+						<a href="manual.html">内容管理</a>
+					</li>
+					<li>
+						<a href="account.html">系统设置</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							用户名
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#"> <i class="icon-lock"></i>
+									更改密码
+								</a>
+							</li>
+							<li>
+								<a href="#"> <i class="icon-key"></i>
+									退出系统
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="container  customcontainer">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="list-group">
+					<a href="activitymanage.html" class="list-group-item ">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						活动列表
+					</a>
+					<a href="activitylocked.html" class="list-group-item active">
+						<i class="icon-chevron-left pull-right"></i>
+						被锁定活动
+					</a>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">
+							<i class="icon-home"></i>
+							活动
+						</a>
+					</li> 
+					<li class="active">被锁定活动</li> 
+				</ol>
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">活动管理</h3>
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<div class="col-md-2">
+									<div class="input-group input-group-sm">
+										<input type="text" class="form-control">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">
+												<i class="icon-search"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											香格里拉
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="#">西安</a>
+											</li>
+											<li>
+												<a href="#">渭南</a>
+											</li>
+											<li>
+												<a href="#">咸阳</a>
+											</li>
+											<li>
+												<a href="#">宝鸡</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											主题选择
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="#">黑主题</a>
+											</li>
+											<li>
+												<a href="#">白主题</a>
+											</li>
+											<li>
+												<a href="#">彩主题</a>
+											</li>
+											<li>
+												<a href="#">其他主题</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">起始</span>
+										<input type="text" id="datebegin" class="form-control">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'datebegin'})">
+												<i class="icon-calendar"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">到</span>
+										<input type="text" class="form-control" id="dateend">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'dateend'})">
+												<i class="icon-calendar"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<div class="col-md-1">
+									<button type="submit" class="btn btn-sm btn-primary">确定</button>
+								</div>
+							</div>
+						</form>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped small">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>活动封面</th>
+										<th>活动名称</th>
+										<th>城市</th>
+										<th>主题</th>
+										<th>地主</th>
+										<th>状态</th>
+										<th>发布时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>001</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>城市街角的游荡</td>
+										<td>西安</td>
+										<td>历史人文景点地标夜生活</td>
+										<td>奥杰名字七个字</td>
+										<td>已发布</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a> 
+										</td>
+									</tr>
+									<tr>
+										<td>001</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded" ></td>
+										<td>城市街角的游荡</td>
+										<td>西安</td>
+										<td>历史人文景点地标夜生活</td>
+										<td>奥杰名字七个字</td>
+										<td>已发布</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>001</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>城市街角的游荡</td>
+										<td>西安</td>
+										<td>历史人文景点地标夜生活</td>
+										<td>奥杰名字七个字</td>
+										<td>已发布</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>001</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>城市街角的游荡</td>
+										<td>西安</td>
+										<td>历史人文景点地标夜生活</td>
+										<td>奥杰名字七个字</td>
+										<td>已发布</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>001</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>城市街角的游荡</td>
+										<td>西安</td>
+										<td>历史人文景点地标夜生活</td>
+										<td>奥杰名字七个字</td>
+										<td>已发布</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a>
+										</td>
+									</tr>
+									<tr>
+										<td>001</td>
+										<td>
+											<img src="images/140.png" alt="..." class="img-rounded"></td>
+										<td>城市街角的游荡</td>
+										<td>西安</td>
+										<td>历史人文景点地标夜生活</td>
+										<td>奥杰名字七个字</td>
+										<td>已发布</td>
+										<td>2014-02-13</td>
+										<td>
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="pagination pull-right">
+							<li>
+								<a href="#">&laquo;</a>
+							</li>
+							<li>
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#">&raquo;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">锁定</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 					<div class="row">
+					<div class=".col-md-6 .col-md-offset-3">
+						-->
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="inputloack" class="col-sm-3 control-label">锁定地主</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="inputloack" placeholder="真的很荒缪"></div>
+							</div>
+							<div class="form-group">
+								<label for="inputlockCase" class="col-sm-3 control-label">锁定原因</label>
+								<div class="col-sm-8">
+									<select class="form-control">
+										<option selected value="">选择锁定原因</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-3 col-sm-8">
+									<textarea class="form-control" rows="3" placeholder="补充说明"></textarea>
+								</div>
+							</div>
+						</form>
+						<!-- 						</div>
+					</div>
+					-->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">锁定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<center class="copyright ">&copy;&nbsp;BETALABS</center>
+</body> 
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/travel.js"></script>
+	<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</html>
