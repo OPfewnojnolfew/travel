@@ -26,4 +26,17 @@ padding-top: 75px;
 	margin-bottom: 20px;
     border-radius:0px;
 }
-
+.topnavbtngroup{
+	position: relative;
+}
+.topnavbtngroup>div{
+	position: absolute;
+	top:0;
+	right:0;
+	color:white;
+	margin-bottom: 20px;
+    border-radius:0px;
+}
+.topnavbtngroup>div button{
+    border-radius:0px;
+}
