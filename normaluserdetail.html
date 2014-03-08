@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+	<title>普通用户</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="[地主旅行]后端管理平台">
+	<meta name="keywords" content="[地主旅行]后端管理平台">
+	<meta name="author" content="Mr Bing">
+	<meta name="robots" content="index,follow">
+	<meta name="application-name" content="[地主旅行]后端管理平台">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/travel.css">
+	<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
+		<div class="container">
+			<div class="navbar-header">
+				<a href="../" class="navbar-brand">[地主旅行]管理系统</a>
+			</div>
+			<nav role="navigation" >
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="activitymanage.html" >活动</a>
+					</li>
+					<li  class="active">
+						<a href="usermanage.html">用户</a>
+					</li>
+					<li>
+						<a href="subject.html">意见反馈</a>
+					</li>
+					<li>
+						<a href="manual.html">内容管理</a>
+					</li>
+					<li>
+						<a href="accountmanage.html">系统设置</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							用户名
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#"> <i class="icon-lock"></i>
+									更改密码
+								</a>
+							</li>
+							<li>
+								<a href="#"> <i class="icon-key"></i>
+									退出系统
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="container  customcontainer">
+		<div class="row">
+			<div class="col-md-3 ">
+				<div class="list-group">
+					<a href="usermanage.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						地主
+					</a>
+					<a href="pendingusermanage.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						待审核地主
+					</a>
+					<a href="normalusermanage.html" class="list-group-item active">
+						<i class="icon-chevron-left pull-right "></i>
+						普通用户
+					</a>
+					<a href="recommendusermanage.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						被推荐地主
+					</a>
+					<a href="#" class="list-group-item">
+						<i class="icon-chevron-left pull-right  text-muted"></i>
+						被锁定用户
+					</a>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<h3>赵一凡</h3>
+
+				<div class="topnav">
+					<ol class="breadcrumb">
+						<li>
+							<a href="#">
+								<i class="icon-home"></i>
+								首页
+							</a>
+						</li>
+						<li>
+							<a href="#">用户</a>
+						</li>
+						<li>
+							<a href="#">赵一凡</a>
+						</li>
+						<li class="active">地主</li>
+					</ol>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h3 class="panel-title">活动基础信息</h3>
+							</div>
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table table-bordered table-striped small">
+										<colgroup>
+										<col class="col-xs-1">
+										<col class="col-xs-7"></colgroup>
+									<tbody>
+										<tr>
+											<td>ID</td>
+											<td>2093</td>
+										</tr>
+										<tr>
+											<td>地址</td>
+											<td>
+												<span class="text-primary">赵一凡</span>
+											</td>
+										</tr>
+										<tr>
+											<td>性别</td>
+											<td>女</td>
+										</tr>
+										<tr>
+											<td>城市</td>
+											<td>西安</td>
+										</tr>
+										<tr>
+											<td>标签</td>
+											<td>学生，吃货</td>
+										</tr>
+										<tr>
+											<td>地址介绍</td>
+											<td>地址介绍地址介绍地址介绍地址介绍地址介绍地址介绍</td>
+										</tr>
+										<tr>
+											<td>地主头像</td>
+											<td>
+												<img src="images/activity.png" alt="" width="50" height="50" class="img-circle"></td>
+										</tr>
+										<tr>
+											<td>背景图</td>
+											<td>
+												<img src="images/activity.png" alt=""></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<center class="copyright ">&copy;&nbsp;BETALABS</center>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.fancybox').fancybox();
+	})
+</script>
+</html>
