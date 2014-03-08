@@ -1,167 +1,214 @@
 <!doctype html>
 <html>
-	<head>
+<head>
 	<title>活动主题</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<meta name="description" content="[地主旅行]后端管理平台">
-  	<meta name="keywords" content="[地主旅行]后端管理平台">
-  	<meta name="author" content="Mr Bing">
-  	<meta name="robots" content="index,follow">
-  	<meta name="application-name" content="[地主旅行]后端管理平台">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="[地主旅行]后端管理平台">
+	<meta name="keywords" content="[地主旅行]后端管理平台">
+	<meta name="author" content="Mr Bing">
+	<meta name="robots" content="index,follow">
+	<meta name="application-name" content="[地主旅行]后端管理平台">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/travel.css">
-	</head>
-	<body>
-		<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
-		  	<div class="container">
-		    <div class="navbar-header">
-			      <a href="../" class="navbar-brand">[地主旅行]管理系统</a>
-		    </div>
-		    <nav role="navigation" >
-		      <ul class="nav navbar-nav">
+	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
+		<div class="container">
+			<div class="navbar-header">
+				<a href="../" class="navbar-brand">[地主旅行]管理系统</a>
+			</div>
+			<nav role="navigation" >
+				<ul class="nav navbar-nav">
 					<li>
 						<a href="index.html">起步</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="activitymanage.html" >活动</a>
 					</li>
 					<li>
 						<a href="userdetail.html">用户</a>
 					</li>
 					<li>
-						<a href="subject.html">意见反馈</a>
+						<a href="feedback.html">意见反馈</a>
+					</li>
+					<li class="active">
+						<a href="manual.html">内容管理</a>
+					</li>
+					<li>
+						<a href="accountmanage.html">系统设置</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							用户名
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#"> <i class="icon-lock"></i>
+									更改密码
+								</a>
+							</li>
+							<li>
+								<a href="#"> <i class="icon-key"></i>
+									退出系统
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="container  customcontainer">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="list-group">
+					<a href="manual.html" class="list-group-item ">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						地主手册
+					</a>
+					<a href="story.html" class="list-group-item ">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						地主故事
+					</a>
+					<a href="service.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						服务协议
+					</a>
+					<a href="policy.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right text-muted"></i>
+						隐私政策
+					</a>
+					<a href="tag.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right"></i>
+						地主标签
+					</a>
+					<a href="subject.html" class="list-group-item active">
+						<i class="icon-chevron-left pull-right"></i>
+						活动主题
+					</a>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<h3>活动主题</h3>
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">
+							<i class="icon-home"></i>
+							首页
+						</a>
 					</li>
 					<li>
 						<a href="#">内容管理</a>
 					</li>
-					<li>
-						<a href="#">系统设置</a>
-					</li>
-		      </ul>
+					<li class="active">活动主题</li>
+				</ol>
 
-		      <ul class="nav navbar-nav navbar-right">
-		      	<li class="dropdown">
-				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				      用户名 <span class="caret"></span>
-				    </a>
-				    <ul class="dropdown-menu">
-				      <li>
-			          <a href="#"><i class="icon-lock"></i> 更改密码</a>
-			        </li>
-	    	        <li>
-			          <a href="#"><i class="icon-key"></i> 退出系统</a>
-			        </li>
-				    </ul>
-				  </li>
-		      </ul>
-		    </nav>
-		    </div>
-		</div>
-		<div class="container  customcontainer">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="list-group">
-					  <a href="#" class="list-group-item "><i class="icon-chevron-left pull-right text-muted"></i>地主手册</a>
-					  <a href="#" class="list-group-item "><i class="icon-chevron-left pull-right text-muted"></i>地主故事</a>
-					  <a href="#" class="list-group-item"><i class="icon-chevron-left pull-right text-muted"></i>服务协议</a>
-					  <a href="#" class="list-group-item"><i class="icon-chevron-left pull-right text-muted"></i>隐私政策</a>
-					  <a href="#" class="list-group-item active"></i>地主标签</a>
-			  		  <a href="#" class="list-group-item"><i class="icon-chevron-left pull-right text-muted"></i>活动主题</a>
-					</div>
-				</div>
-				<div class="col-md-9">
-					<h3>活动主题</h3>
-					<ol class="breadcrumb">
-					  <li><a href="#"><i class="icon-home"></i>首页</a></li>
-					  <li><a href="#">内容管理</a></li>
-					  <li class="active">活动主题</li> 
-					</ol>
-					
-					<div class="row">
-						<div class="col-md-12">
-							<div class="panel panel-success">
-						        <div class="panel-heading">
-						          	<h3 class="panel-title">活动主题</h3>
-						        </div>
-						        <div class="panel-body">
-							          <div class="table-responsive">
-									      <table class="table table-bordered table-striped small"> 
-									      	<colgroup>
-									          <col class="col-xs-2">
-									          <col class="col-xs-7"> 
-									        </colgroup>  
-									        <tbody>
-									          <tr>
-									            <td><strong>主题</strong></td> 
-									            <td><strong>图片</strong></td> 
-									          </tr>
-									          <tr>
-									            <td>主题一</td> 
-									            <td><img src="images/icon.png"></td> 
-									          </tr>
-									          <tr>
-									            <td>主题二</td>
-									            <td><img src="images/icon.png"></td> 
-									          </tr>
-									          <tr>
-									            <td>主题三</td> 
-									            <td><img src="images/icon.png"></td> 
-									          </tr>
-									          <tr>
-									            <td>主题四</td> 
-									            <td><img src="images/icon.png"></td> 
-									          </tr>
-									        </tbody>
-									      </table>
-								    </div> 
-									<h4>添加主题</h4> 
-								    <div class="row">
-										<div class="col-md-6">
-											<form class="form-horizontal" role="form">
-											  <div class="form-group">
-											  	<div class="col-md-2">
-											    <label for="" class="control-label">图标</label>
-											    </div>
-											    <div class="col-md-4">
-													<img src="images/activity.png" alt="" class="img-thumbnail"> 
-											    </div> 
-											    <div class="col-md-4">
-											    	<button type="button" class="btn btn-default icon-paper-clip">选择图片</button>
-											    </div>
-											  </div>
-											  <div class="form-group">
-													<div class="col-md-2">
-														<label for="" class="control-label">名称</label>
-													</div>
-													<div class="col-md-6">
-														<input type="text" class="form-control"  placeholder="名称">
-													</div>
-											  </div> 
-											  <div class="form-group">
-											  		<div class="col-md-3 col-md-offset-2">
-														<button type="button" class="btn btn-info icon-save">保存</button>
-													</div>
-													<div class="col-md-3">
-														<button type="button" class="btn btn-default icon-undo">取消</button>
-													</div> 
-											  </div>
-											</form>
-										</div> 
-								    </div>
-								    
-					    		</div>
-					    	</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h3 class="panel-title">活动主题</h3>
+							</div>
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table table-bordered table-striped small">
+										<colgroup>
+										<col class="col-xs-2">
+										<col class="col-xs-7"></colgroup>
+									<tbody>
+										<tr>
+											<td> <strong>主题</strong>
+											</td>
+											<td> <strong>图片</strong>
+											</td>
+										</tr>
+										<tr>
+											<td>主题一</td>
+											<td>
+												<img src="images/icon.png"></td>
+										</tr>
+										<tr>
+											<td>主题二</td>
+											<td>
+												<img src="images/icon.png"></td>
+										</tr>
+										<tr>
+											<td>主题三</td>
+											<td>
+												<img src="images/icon.png"></td>
+										</tr>
+										<tr>
+											<td>主题四</td>
+											<td>
+												<img src="images/icon.png"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h4>添加主题</h4>
+							<div class="row">
+								<div class="col-md-6">
+									<form class="form-horizontal" role="form">
+										<div class="form-group">
+											<div class="col-md-2">
+												<label for="" class="control-label">图标</label>
+											</div>
+											<div class="col-md-4">
+												<img src="images/activity.png" alt="" class="img-thumbnail"></div>
+											<div class="col-md-4">
+												<button type="button" id="J_picpicker" class="btn btn-default icon-paper-clip">选择图片</button>
+												<input type="hidden" id="piceditor"></div>
+										</div>
+										<div class="form-group">
+											<div class="col-md-2">
+												<label for="" class="control-label">名称</label>
+											</div>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  placeholder="名称"></div>
+										</div>
+										<div class="form-group">
+											<div class="col-md-3 col-md-offset-2">
+												<button type="button" class="btn btn-info icon-save">保存</button>
+											</div>
+											<div class="col-md-3">
+												<button type="button" class="btn btn-default icon-undo">取消</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<center class="copyright ">&copy;&nbsp;BETALABS</center>
-	</body>
-	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</div>
+</div>
+<center class="copyright ">&copy;&nbsp;BETALABS</center>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/ueditor1_3_6/ueditor.config.js"></script>
+<script type="text/javascript" src="js/ueditor1_3_6/ueditor.all.min.js"></script>
+<script type="text/javascript">
+		var picEditor = UE.getEditor('piceditor');
+      	$("#J_picpicker").click(function(){
+          	var pic = picEditor.getDialog("insertimage");
+          	pic.render();
+          	pic.open();
+      	});
+      	picEditor.addListener('beforeInsertImage',function(t, arg){
+          	//进行操作
+        })
+	</script>
 </html>

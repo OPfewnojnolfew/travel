@@ -10,10 +10,10 @@
 	<meta name="author" content="Mr Bing">
 	<meta name="robots" content="index,follow">
 	<meta name="application-name" content="[地主旅行]后端管理平台">
-
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/travel.css"></head>
+	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
 		<div class="container">
@@ -25,20 +25,20 @@
 					<li>
 						<a href="index.html">起步</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="activitymanage.html" >活动</a>
 					</li>
 					<li>
 						<a href="userdetail.html">用户</a>
 					</li>
 					<li>
-						<a href="subject.html">意见反馈</a>
+						<a href="feedback.html">意见反馈</a>
 					</li>
 					<li>
-						<a href="#">内容管理</a>
+						<a href="manual.html">内容管理</a>
 					</li>
-					<li>
-						<a href="#">系统设置</a>
+					<li  class="active">
+						<a href="accountmanage.html">系统设置</a>
 					</li>
 				</ul>
 
@@ -69,12 +69,12 @@
 		<div class="row">
 			<div class="col-md-3">
 				<div class="list-group">
-					<a href="#" class="list-group-item active">
+					<a href="accountmanage.html" class="list-group-item active">
 						<i class="icon-chevron-left pull-right"></i>
 						账户列表
 					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
+					<a href="log.html" class="list-group-item">
+						<i class="icon-chevron-left pull-right"></i>
 						查看日志
 					</a>
 				</div>
@@ -84,13 +84,10 @@
 					<li>
 						<a href="#">
 							<i class="icon-home"></i>
-							首页
+							系统设置
 						</a>
-					</li>
-					<li>
-						<a href="#">中页</a>
-					</li>
-					<li class="active">末页</li>
+					</li> 
+					<li class="active">账户列表</li>
 				</ol>
 				<p>
 					<a class="btn btn-primary" href="addaccount.html">
@@ -119,7 +116,7 @@
 									<a href="#" data-toggle="modal" data-target="#myModal">更改权限</a>
 								</td>
 							</tr>
-							<tr class="active">
+							<tr>
 								<td>001</td>
 								<td>张小七</td>
 								<td>超级管理员</td>
@@ -139,7 +136,7 @@
 									<a href="#" data-toggle="modal" data-target="#myModal">更改权限</a>
 								</td>
 							</tr>
-							<tr class="active">
+							<tr>
 								<td>001</td>
 								<td>张小七</td>
 								<td>管理员</td>
@@ -159,7 +156,7 @@
 									<a href="#" data-toggle="modal" data-target="#myModal">更改权限</a>
 								</td>
 							</tr>
-							<tr class="active">
+							<tr>
 								<td>001</td>
 								<td>张小七</td>
 								<td>管理员</td>
@@ -245,7 +242,7 @@
 </div>
 <center class="copyright ">&copy;&nbsp;BETALABS</center>
 </body>
-<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
+
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/travel.js"></script>
