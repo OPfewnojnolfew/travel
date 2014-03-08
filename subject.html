@@ -199,16 +199,5 @@
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/ueditor1_3_6/ueditor.config.js"></script>
-<script type="text/javascript" src="js/ueditor1_3_6/ueditor.all.min.js"></script>
-<script type="text/javascript">
-		var picEditor = UE.getEditor('piceditor');
-      	$("#J_picpicker").click(function(){
-          	var pic = picEditor.getDialog("insertimage");
-          	pic.render();
-          	pic.open();
-      	});
-      	picEditor.addListener('beforeInsertImage',function(t, arg){
-          	//进行操作
-        })
-	</script>
+<script type="text/javascript" src="js/ueditor1_3_6/ueditor.all.min.js"></script> 
 </html>
