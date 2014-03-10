@@ -18,7 +18,7 @@
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
-		<div class="container">
+		<div class="headcontainer">
 			<div class="navbar-header">
 				<a href="../" class="navbar-brand">[地主旅行]管理系统</a>
 			</div>
@@ -34,7 +34,7 @@
 						<a href="usermanage.html">用户</a>
 					</li>
 					<li>
-						<a href="subject.html">意见反馈</a>
+						<a href="feedback.html">意见反馈</a>
 					</li>
 					<li>
 						<a href="manual.html">内容管理</a>
@@ -67,7 +67,7 @@
 			</nav>
 		</div>
 	</div>
-	<div class="container  customcontainer">
+	<div class="contentcontainer">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="list-group">
@@ -113,7 +113,7 @@
 						<form class="form-horizontal" role="form">
 							<div class="form-group">
 								<div class="col-md-3">
-									<div class="input-group input-group-sm">
+									<div class="input-group">
 										<input type="text" class="form-control">
 										<span class="input-group-btn">
 											<button class="btn btn-default" type="button">
@@ -123,43 +123,24 @@
 									</div>
 								</div>
 								<div class="col-md-3 col-md-offset-5">
-									<div class="btn-group btn-group-sm">
-										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											城市
-											<span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="#">西安</a>
-											</li>
-											<li>
-												<a href="#">渭南</a>
-											</li>
-											<li>
-												<a href="#">咸阳</a>
-											</li>
-											<li>
-												<a href="#">宝鸡</a>
-											</li>
-										</ul>
+									<div class="btn-group">
+										<select class="form-control">
+											<option>城市</option>
+											<option>西安</option>
+											<option>渭南</option>
+											<option>咸阳</option>
+										</select>
 									</div>
-									<div class="btn-group btn-group-sm">
-										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											性别
-											<span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="#">男</a>
-											</li>
-											<li>
-												<a href="#">女</a>
-											</li>
-										</ul>
+									<div class="btn-group">
+										<select class="form-control">
+											<option>性别</option>
+											<option>男</option>
+											<option>女</option>
+										</select>
 									</div>
 								</div>
 								<div class="col-md-1">
-									<button type="submit" class="btn btn-sm btn-primary">确定</button>
+									<button type="submit" class="btn btn-primary">确定</button>
 								</div>
 							</div>
 						</form>
@@ -167,15 +148,15 @@
 							<table class="table table-bordered table-striped small">
 								<thead>
 									<tr>
-										<th>ID</th>
-										<th>头像</th>
-										<th>名称</th>
-										<th>性别</th>
-										<th>标签</th>
-										<th>城市</th>
-										<th>申请时间</th>
-										<th>认领项</th>
-										<th>操作</th>
+										<th class="col-sm-1">ID <i class="icon-sort"></i></th>
+										<th class="col-sm-1">头像</th>
+										<th class="col-sm-2">名称</th>
+										<th class="col-sm-1">性别</th>
+										<th class="col-sm-1">标签</th>
+										<th class="col-sm-1">城市</th>
+										<th class="col-sm-1">申请时间 <i class="icon-sort"></i></th>
+										<th class="col-sm-1">认领项</th>
+										<th class="col-sm-1">操作</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -302,6 +283,7 @@
 								</tbody>
 							</table>
 						</div>
+						<p class="pull-left">锁定地主数:10个</p>
 						<ul class="pagination pull-right">
 							<li>
 								<a href="#">&laquo;</a>

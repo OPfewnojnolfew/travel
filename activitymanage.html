@@ -30,16 +30,16 @@
 						<a href="activitymanage.html" >活动</a>
 					</li>
 					<li>
-						<a href="userdetail.html">用户</a>
+						<a href="usermanage.html">用户</a>
 					</li>
 					<li>
-						<a href="subject.html">意见反馈</a>
+						<a href="feedback.html">意见反馈</a>
 					</li>
 					<li>
 						<a href="manual.html">内容管理</a>
 					</li>
 					<li>
-						<a href="account.html">系统设置</a>
+						<a href="accountmanage.html">系统设置</a>
 					</li>
 				</ul>
 
@@ -133,7 +133,7 @@
 										<span class="input-group-addon">起始</span>
 										<input type="text" id="datebegin" class="form-control">
 										<span class="input-group-btn">
-											<button class="btn btn-default" type="button" onfocus="WdatePicker({el:'datebegin'})">
+											<button class="btn btn-default" id="btndatebegin" type="button">
 												<i class="icon-calendar"></i>
 											</button>
 										</span>
@@ -144,7 +144,7 @@
 										<span class="input-group-addon">到</span>
 										<input type="text" class="form-control" id="dateend">
 										<span class="input-group-btn">
-											<button class="btn btn-default" type="button" onfocus="WdatePicker({el:'dateend'})">
+											<button class="btn btn-default" type="button" id="btndateend">
 												<i class="icon-calendar"></i>
 											</button>
 										</span>
@@ -159,15 +159,21 @@
 							<table class="table table-bordered table-striped small">
 								<thead>
 									<tr>
-										<th class="col-md-1">ID</th>
-										<th class="col-md-2">活动封面</th>
-										<th class="col-md-2">活动名称</th>
-										<th>城市</th>
-										<th>主题</th>
-										<th>地主</th>
-										<th>状态</th>
-										<th>发布时间</th>
-										<th>操作</th>
+										<th class="col-md-1">
+											ID
+											<i class="icon-sort"></i>
+										</th>
+										<th class="col-sm-1">活动封面</th>
+										<th class="col-sm-2">活动名称</th>
+										<th class="col-sm-1">城市</th>
+										<th class="col-sm-3">主题</th>
+										<th class="col-md-1">地主</th>
+										<th class="col-sm-1">状态</th>
+										<th class="col-sm-1">
+											发布时间
+											<i class="icon-sort"></i>
+										</th>
+										<th  class="col-md-1">操作</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -270,6 +276,7 @@
 								</tbody>
 							</table>
 						</div>
+						<p class="pull-left">活动数:10个</p>
 						<ul class="pagination pull-right">
 							<li>
 								<a href="#">&laquo;</a>
@@ -351,4 +358,14 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/travel.js"></script>
 	<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#btndatebegin").bind("click mouseenter",function () {
+			WdatePicker({el:'datebegin'});
+		});
+		$("#btndateend").bind("click mouseenter",function () {
+			WdatePicker({el:'dateend'});
+		})
+	})
+	</script>
 </html>
