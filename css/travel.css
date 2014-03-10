@@ -2,10 +2,10 @@
 
 }
 .headcontainer{
-padding:0px 15px 0px 15px;
+	padding:0px 15px 0px 15px;
 }
 .contentcontainer{
-padding:75px 15px 0px 15px;
+	padding:75px 15px 0px 15px;
 }
 .table>thead>tr>th, .table>tbody>tr>td {
     vertical-align:middle;
