@@ -17,7 +17,7 @@
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="banner" >
-		<div class="container">
+		<div class="headcontainer">
 			<div class="navbar-header">
 				<a href="../" class="navbar-brand">[地主旅行]管理系统</a>
 			</div>
@@ -66,7 +66,7 @@
 			</nav>
 		</div>
 	</div>
-	<div class="container  customcontainer">
+	<div class="contentcontainer">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="list-group">
@@ -87,8 +87,8 @@
 							<i class="icon-home"></i>
 							活动
 						</a>
-					</li> 
-					<li class="active">被锁定活动</li> 
+					</li>
+					<li class="active">被锁定活动</li>
 				</ol>
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -98,7 +98,7 @@
 						<form class="form-horizontal" role="form">
 							<div class="form-group">
 								<div class="col-md-2">
-									<div class="input-group input-group-sm">
+									<div class="input-group">
 										<input type="text" class="form-control">
 										<span class="input-group-btn">
 											<button class="btn btn-default" type="button">
@@ -108,72 +108,50 @@
 									</div>
 								</div>
 								<div class="col-md-3">
-									<div class="btn-group btn-group-sm">
-										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											香格里拉
-											<span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="#">西安</a>
-											</li>
-											<li>
-												<a href="#">渭南</a>
-											</li>
-											<li>
-												<a href="#">咸阳</a>
-											</li>
-											<li>
-												<a href="#">宝鸡</a>
-											</li>
-										</ul>
+									<div class="btn-group">
+										<select class="form-control">
+											<option>香格里拉</option>
+											<option>西安</option>
+											<option>渭南</option>
+											<option>咸阳</option>
+											<option>宝鸡</option>
+										</select>
 									</div>
 
-									<div class="btn-group btn-group-sm">
-										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											主题选择
-											<span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="#">黑主题</a>
-											</li>
-											<li>
-												<a href="#">白主题</a>
-											</li>
-											<li>
-												<a href="#">彩主题</a>
-											</li>
-											<li>
-												<a href="#">其他主题</a>
-											</li>
-										</ul>
+									<div class="btn-group">
+										<select class="form-control">
+											<option>主题选择</option>
+											<option>黑主题</option>
+											<option>白主题</option>
+											<option>彩主题</option>
+											<option>其他主题</option>
+										</select>
 									</div>
 								</div>
 								<div class="col-md-3">
-									<div class="input-group input-group-sm">
+									<div class="input-group">
 										<span class="input-group-addon">起始</span>
 										<input type="text" id="datebegin" class="form-control">
 										<span class="input-group-btn">
-											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'datebegin'})">
+											<button class="btn btn-default" type="button" onfocus="WdatePicker({el:'datebegin'})">
 												<i class="icon-calendar"></i>
 											</button>
 										</span>
 									</div>
 								</div>
 								<div class="col-md-3">
-									<div class="input-group input-group-sm">
+									<div class="input-group">
 										<span class="input-group-addon">到</span>
 										<input type="text" class="form-control" id="dateend">
 										<span class="input-group-btn">
-											<button class="btn btn-default" type="button" onclick="WdatePicker({el:'dateend'})">
+											<button class="btn btn-default" type="button" onfocus="WdatePicker({el:'dateend'})">
 												<i class="icon-calendar"></i>
 											</button>
 										</span>
 									</div>
 								</div>
 								<div class="col-md-1">
-									<button type="submit" class="btn btn-sm btn-primary">确定</button>
+									<button type="submit" class="btn btn-primary">确定</button>
 								</div>
 							</div>
 						</form>
@@ -181,9 +159,9 @@
 							<table class="table table-bordered table-striped small">
 								<thead>
 									<tr>
-										<th>ID</th>
-										<th>活动封面</th>
-										<th>活动名称</th>
+										<th class="col-md-1">ID</th>
+										<th class="col-md-2">活动封面</th>
+										<th class="col-md-2">活动名称</th>
 										<th>城市</th>
 										<th>主题</th>
 										<th>地主</th>
@@ -204,7 +182,7 @@
 										<td>已发布</td>
 										<td>2014-02-13</td>
 										<td>
-											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a> 
+											<a href="#" class="text-success" data-toggle="modal" data-target="#myModal">取消锁定</a>
 										</td>
 									</tr>
 									<tr>
@@ -356,7 +334,7 @@
 		</div>
 	</div>
 	<center class="copyright ">&copy;&nbsp;BETALABS</center>
-</body> 
+</body>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/travel.js"></script>
