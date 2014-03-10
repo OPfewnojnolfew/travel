@@ -1,8 +1,11 @@
 .header{
 
 }
-.customcontainer{
-padding-top: 75px;
+.headcontainer{
+padding:0px 15px 0px 15px;
+}
+.contentcontainer{
+padding:75px 15px 0px 15px;
 }
 .table>thead>tr>th, .table>tbody>tr>td {
     vertical-align:middle;
