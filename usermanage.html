@@ -397,12 +397,12 @@
 	<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
 	<script type="text/javascript">
 	$(function(){
-		$("#btndatebegin").bind("click mouseenter",function () {
+		$("#btndatebegin,#datebegin").bind("click",function () {
 			WdatePicker({el:'datebegin'});
 		});
-		$("#btndateend").bind("click mouseenter",function () {
+		$("#btndateend,#dateend").bind("click",function () {
 			WdatePicker({el:'dateend'});
-		})
+		});
 	})
 	</script>
 </html>
