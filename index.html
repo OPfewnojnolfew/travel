@@ -51,12 +51,14 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#"> <i class="icon-lock"></i>
+								<!-- 0313新增更改密码对话框 -->
+								<a href="#"  data-toggle="modal" data-target="#changeInfo"> <i class="icon-lock"></i>
 									更改密码
 								</a>
 							</li>
 							<li>
-								<a href="#"> <i class="icon-key"></i>
+								<!-- 0313新增警告框 -->
+								<a href="#" data-toggle="modal" data-target="#alert"> <i class="icon-key"></i>
 									退出系统
 								</a>
 							</li>
@@ -69,31 +71,12 @@
 	<div class="contentcontainer">
 		<div class="row">
 			<div class="col-md-3">
-				<div class="list-group">
+				<!-- 0313新增侧边栏定位 -->
+				<div class="list-group affix">
 					<a href="index.html" class="list-group-item active">
 						<i class="icon-chevron-left pull-right"></i>
 						首页
 					</a>
-<!-- 					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						活动
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						用户
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						意见反馈
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						内容管理
-					</a>
-					<a href="#" class="list-group-item">
-						<i class="icon-chevron-left pull-right text-muted"></i>
-						系统设置
-					</a> -->
 				</div>
 			</div>
 			<div class="col-md-9">
@@ -259,7 +242,89 @@
 			</div>
 		</div>
 	</div>
-	<center class="copyright ">&copy;&nbsp;BETALABS</center>
+	<!-- 0313新增更改密码对话框 -->
+	<div class="modal fade" id="changeInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog ">
+			<div class="modal-content col-md-8 col-md-offset-2">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">更改密码</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="inputloack" class="col-sm-4 control-label">原密码</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" name="password" placeholder="原密码"></div>
+						</div>
+						<div class="form-group">
+							<label for="inputloack" class="col-sm-4 control-label">新密码</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" name="password" placeholder="新密码"></div>
+						</div>
+						<div class="form-group">
+							<label for="inputloack" class="col-sm-4 control-label">确认密码</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" name="password" placeholder="确认密码"></div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">更改</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 0313新增警告框 -->
+	<div class="modal fade"tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog ">
+			<div class="modal-content col-md-8 col-md-offset-2">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">更改密码</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="inputloack" class="col-sm-4 control-label">原密码</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" name="password" placeholder="原密码"></div>
+						</div>
+						<div class="form-group">
+							<label for="inputloack" class="col-sm-4 control-label">新密码</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" name="password" placeholder="新密码"></div>
+						</div>
+						<div class="form-group">
+							<label for="inputloack" class="col-sm-4 control-label">确认密码</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" name="password" placeholder="确认密码"></div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">更改</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade"  id="alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content col-md-6 col-md-offset-3">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">退出系统</h4>
+				</div>
+				<div class="modal-body">您已经退出系统!</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<center class="copyright bs-footer">&copy;&nbsp;BETALABS</center>
 </body>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>

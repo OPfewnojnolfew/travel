@@ -31,13 +31,14 @@
 						<h4 class="text-primary">欢迎登录</h4>
 					</div>
 					<div class="panel-body">
+
 						<form class="form-horizontal" role="form">
 							<div class="form-group">
 								<div class="col-sm-10 col-md-offset-1">
 									<div class="input-group">
 										<span class="input-group-addon"> <i class="icon-leaf"></i>
 										</span>
-										<input type="text" class="form-control" placeholder="用户名"></div>
+										<input type="text" class="form-control" id="username" placeholder="用户名"></div>
 								</div>
 							</div>
 							<div class="form-group">
@@ -45,7 +46,7 @@
 									<div class="input-group">
 										<span class="input-group-addon"> <i class="icon-key"></i>
 										</span>
-										<input type="password" class="form-control" name="password" placeholder="密码"></div>
+										<input type="password" class="form-control" name="password" id="password" placeholder="密码"></div>
 								</div>
 							</div>
 							<div class="form-group">
@@ -65,7 +66,7 @@
 							</div>
 							<div class="form-group">
 								<div class="col-sm-10 col-md-offset-1">
-									<a class="btn btn-primary" href="#">
+									<a class="btn btn-primary" id="submit" href="#">
 										登录
 										<i class="icon-hand-right"></i>
 
@@ -73,62 +74,36 @@
 								</div>
 							</div>
 						</form>
-						<!-- 						<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-
-							<form action="1.php" method="post" class="margin-base-vertical">
-								<div class="alert alert-danger">输入有误,请重新输入</div>
-								<p class="input-group input-group-lg">
-									<span class="input-group-addon">
-										<span class="icon-leaf"></span>
-									</span>
-									<input type="text" class="form-control" name="text" placeholder="用户名"></p>
-								<p class="input-group  input-group-lg">
-									<span class="input-group-addon">
-										<span class="icon-key"></span>
-									</span>
-									<input type="password" class="form-control" name="password" placeholder="密码"></p>
-								<p class="input-group  input-group-lg">
-
-									<div class="row">
-										<div class="col-md-8">
-											<div class="input-group input-group-lg">
-												<span class="input-group-addon">
-													<span class="icon-picture"></span>
-												</span>
-
-												<input type="text" class="form-control" name="text" placeholder="验证码"></div>
-										</div>
-										<div class="col-md-4">
-											<img src="images/checkcode.png"/>
-										</div>
-
-									</div>
-								</p>
-								<p class="input-group  input-group-lg">
-									<div class="row">
-										<div class="col-md-4 col-md-offset-4">
-											<a class="btn btn-lg btn-primary" href="#">
-												登录
-												<i class="icon-hand-right"></i>
-
-											</a>
-										</div>
-
-									</div>
-
-								</p>
-							</form>
-						</div>
 					</div>
-					-->
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	<!-- 0313新增loading -->
+	<div class="modal fade"  id="alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+		<div class="modal-dialog loading ">
+			<div class="col-md-1 col-md-offset-5">
+				<img src="images/loading.gif">
+			</div>
+
+		</div>
+	</div>
+
 </body>
-<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
-<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/respond.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript"> 
+    $('#username').tooltip({placement : "right",title : "请填写用户名",container: 'body'});  
+    $('#username').tooltip('show');
+    //$('#username').tooltip('hide'); //隐藏
+    //$('#username').tooltip('destroy') //销毁
+    $("#password").tooltip({placement : "right",title : "请填写密码",container: 'body'})
+    $('#password').tooltip('show');
+	$("#submit").click(function(){ 
+		$("#alert").modal();
+	});
+
+</script>
 </html>

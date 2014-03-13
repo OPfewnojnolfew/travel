@@ -43,3 +43,16 @@
 .topnavbtngroup>div button{
     border-radius:0px;
 }
+.loading{top: 300px;}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+	.affix{width: 250px;}
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+	.affix{width: 280px;}
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+	.affix{width: 330px;}
+}
+@media only screen and (min-width: 1600px) {
+	.affix{width: 353px;}
+}
